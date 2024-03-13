@@ -94,7 +94,7 @@
         <p>Wishing you a day filled with love, joy, and lots of surprises!</p>
         <button id="reveal-button">Yaha Click mat kar !!</button>
         <div class="secret-message" id="secret-message">
-            <p> Are waa abb samjha tuze tu kon hai &#128514;&#128514;.Btw itni bhi chutiya nhi hai kyuki
+            <p> Btw itni bhi chutiya nhi hai kyuki
                 mein hu teri bestie  &#128540;.Happy Happy wala Birthday Methii,you are always amazing and deserve 
                 all the happiness in the world.The sweetest,prettiest, the one who was always there in my highest and lowest times!
                 My comfort person,thank u for existing!!
@@ -134,8 +134,8 @@
         }).then((result) => {
             if (result.isConfirmed && result.value && result.value.toLowerCase() === "chutiya") {
                 Swal.fire({
-                    title: 'Correct!',
-                    text: 'Here is the secret message!',
+                    title: 'Samjhla ata !',
+                    
                     icon: 'success'
                 });
                 document.getElementById('secret-message').style.display = 'block';
