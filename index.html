@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="Images/4.jpeg" />
+    <title>Happy Birthday Methiii !!</title>
+    <style>
+
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        
+        background: linear-gradient(120deg,  #d8b6dd,#97e7ab);
+       /* background: linear-gradient(120deg, #1e0138, #442a80);*/
+        /*background: linear-gradient(120deg, #020202, #000000);*/
+    }
+    .container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+        color: #441608;
+    }
+    p {
+        font-size: 25px;
+        font-weight: bold;
+        font-family:'Times New Roman', Times, serif;
+    }
+    .secret-message {
+        display: none;
+        margin-top: 20px;
+        padding: 10px;
+        background-color: #c6f7bc;
+        border-radius: 5px;
+    }
+    #reveal-button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #f34b18;
+        color: #fff;
+        border: none;
+        border-radius: 0px;
+        cursor: pointer;
+    }
+    .photo-grid {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 20px;
+    }
+    .photo {
+        width: calc(25% - 20px); /* Adjusting width for 4 photos per row */
+        height: 300px;
+        width:300px;
+        margin: 10px;
+        border-radius: 2px;
+        border-bottom: 40px solid rgb(255, 255, 255);
+        object-fit: cover;
+        border-top: 14px solid rgb(255, 255, 255);
+        border-left: 14px solid rgb(255, 255, 255); 
+        border-right: 14px solid rgb(255, 255, 255);
+        filter: saturate(130%);
+    }
+    .heart {
+        color: red; 
+    }
+    @media (max-width: 768px) {
+        .photo {
+            width: calc(33.33% - 20px); /* Adjusting width for 3 photos per row */
+        }
+    }
+
+    /* Media query for even smaller screens */
+    @media (max-width: 480px) {
+        .photo {
+            width: calc(50% - 20px); /* Adjusting width for 2 photos per row */
+        }
+    }
+    .heart {
+        color: red; /* Setting the color of the heart emoji */
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <h1>&#127881;Happy Birthday Methiii !&#127881;</h1>
+        <p>Wishing you a day filled with love, joy, and lots of surprises!</p>
+        <button id="reveal-button">Yaha Click mat kar !!</button>
+        <div class="secret-message" id="secret-message">
+            <p> Are waa abb samjha tuze tu kon hai &#128514;&#128514;.Btw itni bhi chutiya nhi hai kyuki
+                mein hu teri bestie  &#128540;.Happy Happy wala Birthday Methii,you are always amazing and deserve 
+                all the happiness in the world.The sweetest,prettiest, the one who was always there in my highest and lowest times!
+                My comfort person,thank u for existing!!
+                Love you !❤️ Looking back at all those moments from meeting on the first day
+                 of "jail" 😂, spending nights just talking n laughing 🥴, cracking double meaning in every possible sentence 😶,
+                  abusing in marathi kyuki ganta kisiko kuch samjh nhi ayega😂 ,to suddenly having a serious convo , from being 
+                  together every day n night to  planning to meet according to schedule from months we have came a long way ❤️,n 
+                  will continue the same in future too , 
+                so proud n happy to have u in my life ,once again happy happy b'day Maithili Maithili Maithili Kore 💕
+                Enjoy your special day to the fullest!&#127881;</p>
+        </div>
+    </div>
+
+    <div id="photo-grid">
+        <img class="photo" src="Images/1.jpeg" alt="Photo 1">
+        <img class="photo" src="Images/2.jpeg" alt="Photo 2">
+        <img class="photo" src="Images/3.jpeg" alt="Photo 3">
+        <img class="photo" src="Images/4.jpeg" alt="Photo 3">
+        <img class="photo" src="Images/5.jpeg" alt="Photo 3">
+        <img class="photo" src="Images/6.jpeg" alt="Photo 3">
+        <img class="photo" src="Images/7.jpeg" alt="Photo 3">
+        <img class="photo" src="Images/9.jpeg" alt="Photo 3">
+        
+        
+        <!-- Add more photos as needed -->
+    </div>
+
+    <script>
+        document.getElementById('reveal-button').addEventListener('click', function() {
+            var answer = prompt("Pata tha nhi bolne pr bhi karegi yahi !! chl koi nhi abb answer this . Tu kon hai ??");
+            if (answer && answer.toLowerCase() === "chutiya") {
+                document.getElementById('secret-message').style.display = 'block';
+            } else {
+                alert("Nah, aur soch ache se, chutiya !!");
+            }
+        });
+    </script>
+</body>
+</html>
