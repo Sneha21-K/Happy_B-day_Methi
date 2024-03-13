@@ -130,21 +130,25 @@
             inputPlaceholder: 'Tu kon hai ??',
             showCancelButton: true,
             confirmButtonText: 'Submit',
+            confirmButtonColor: '#3085d6',
             cancelButtonText: 'Cancel',
-            inputPlaceholderColor:'#818589'
+            inputPlaceholderColor:'#000000'
         }).then((result) => {
             if (result.isConfirmed && result.value && result.value.toLowerCase() === "chutiya") {
                 Swal.fire({
                     title: 'Samjhla ata !',
-                    
-                    icon: 'success'
+                    confirmButtonText: 'HOO',
+                    icon: 'success',
+                    confirmButtonColor: '#3085d6'
                 });
                 document.getElementById('secret-message').style.display = 'block';
             } else if (result.isConfirmed) {
                 Swal.fire({
                     title: 'Nah!',
                     text: 'aur soch ache se, chutiya !!',
-                    icon: 'error'
+                    icon: 'error',
+                   
+                    confirmButtonColor: '#3085d6'
                 });
             }
         });
