@@ -132,14 +132,18 @@
             confirmButtonText: 'Submit',
             confirmButtonColor: '#3085d6',
             cancelButtonText: 'Cancel',
-            inputPlaceholderColor:'#000000'
+            inputPlaceholderColor:'#000000',
+            allowOutsideClick: false, 
+            allowEscapeKey: false, 
         }).then((result) => {
             if (result.isConfirmed && result.value && result.value.toLowerCase() === "chutiya") {
                 Swal.fire({
                     title: 'Samjhla ata !',
                     confirmButtonText: 'HOO',
                     icon: 'success',
-                    confirmButtonColor: '#3085d6'
+                    confirmButtonColor: '#3085d6',
+                    allowOutsideClick: false, 
+                allowEscapeKey: false, 
                 });
                 document.getElementById('secret-message').style.display = 'block';
             } else if (result.isConfirmed) {
@@ -148,7 +152,9 @@
                     text: 'aur soch ache se, chutiya !!',
                     icon: 'error',
                    
-                    confirmButtonColor: '#3085d6'
+                    confirmButtonColor: '#3085d6',
+                    allowOutsideClick: false, 
+                allowEscapeKey: false, 
                 });
             }
         });
