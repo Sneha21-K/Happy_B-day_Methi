@@ -125,12 +125,13 @@
     <script>
     document.getElementById('reveal-button').addEventListener('click', function() {
         Swal.fire({
-            title: "Pata tha nhi bolne pr bhi karegi yahi !!",
+            title: "Pata tha nhi bolne pr bhi karegi yahi !! chl abb bata",
             input: 'text',
             inputPlaceholder: 'Tu kon hai ??',
             showCancelButton: true,
             confirmButtonText: 'Submit',
-            cancelButtonText: 'Cancel'
+            cancelButtonText: 'Cancel',
+            inputPlaceholderColor:'#818589'
         }).then((result) => {
             if (result.isConfirmed && result.value && result.value.toLowerCase() === "chutiya") {
                 Swal.fire({
@@ -141,8 +142,8 @@
                 document.getElementById('secret-message').style.display = 'block';
             } else if (result.isConfirmed) {
                 Swal.fire({
-                    title: 'Incorrect!',
-                    text: 'Nah, aur soch ache se, chutiya !!',
+                    title: 'Nah!',
+                    text: 'aur soch ache se, chutiya !!',
                     icon: 'error'
                 });
             }
