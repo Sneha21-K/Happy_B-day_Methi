@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" href="Images/4.jpeg" />
     <title>Happy Birthday Methiii !!</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> 
     <style>
 
     body {
@@ -121,14 +123,31 @@
     </div>
 
     <script>
-        document.getElementById('reveal-button').addEventListener('click', function() {
-            var answer = prompt("Pata tha nhi bolne pr bhi karegi yahi !! chl koi nhi abb answer this . Tu kon hai ??");
-            if (answer && answer.toLowerCase() === "chutiya") {
+    document.getElementById('reveal-button').addEventListener('click', function() {
+        Swal.fire({
+            title: "Pata tha nhi bolne pr bhi karegi yahi !!",
+            input: 'text',
+            inputPlaceholder: 'Tu kon hai ??',
+            showCancelButton: true,
+            confirmButtonText: 'Submit',
+            cancelButtonText: 'Cancel'
+        }).then((result) => {
+            if (result.isConfirmed && result.value && result.value.toLowerCase() === "chutiya") {
+                Swal.fire({
+                    title: 'Correct!',
+                    text: 'Here is the secret message!',
+                    icon: 'success'
+                });
                 document.getElementById('secret-message').style.display = 'block';
-            } else {
-                alert("Nah, aur soch ache se, chutiya !!");
+            } else if (result.isConfirmed) {
+                Swal.fire({
+                    title: 'Incorrect!',
+                    text: 'Nah, aur soch ache se, chutiya !!',
+                    icon: 'error'
+                });
             }
         });
-    </script>
+    });
+</script>
 </body>
 </html>
